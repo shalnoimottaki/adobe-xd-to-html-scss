@@ -1,0 +1,226 @@
+$primary: #B28585;
+$secondary: #F8F5F1;
+body{
+  font-family: 'Raleway', sans-serif;
+  min-height: 8000px;
+}
+header{
+  display: flex;
+  height: 160px;
+  padding: 20px;
+  align-items: center;
+  .logo-holder{
+    flex: 0.5;
+    display: flex;
+    justify-content: center;
+    img{
+      width: 100px;
+      height: 100px;
+    }
+    margin-right: 30px;
+  }
+  nav{
+    flex: 1;
+    ul{
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      li{
+        display: inline-block;
+        font-size: 20px;
+        #link{
+          display: inline-block;
+          color: #707070;
+          padding: 15px 20px;
+          font-weight: lighter;
+          text-decoration: none;
+          &:hover{
+            color: #b28585;
+          }
+        }
+        &.active{
+          a{
+            background: $secondary;
+            font-weight: bold;
+            border-radius: 1.5em;
+          }
+        }
+      }
+    }
+  }
+}
+.hero-banner{
+  .slider{
+    .slide{
+      height: 640px;
+      background-color: $secondary;
+      display: flex;
+      // width: 100%;
+      position: relative;
+      overflow: hidden;
+      .slide-overlay-bottom {
+          position: absolute;
+          bottom: -45px;
+          left: 0;
+          right: 0;
+          z-index: 1000;
+      }
+      .image{
+        flex: 1;
+        background-image: url('./banner-slider-1.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: relative;
+        &:after{
+          content:"";
+          display: block;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;bottom: 0;right: 0;left:0;
+          background-image: url('./slide-banner-overlay-a.svg');
+          background-repeat: no-repeat;
+          background-position: right top;
+        }
+      }
+      .content-holder{
+        flex: 0.7;
+      }
+      .content{
+        position: absolute;
+        left: 50%;right: 0;
+        top: 0;bottom: 0;
+        z-index: 500;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding-right: 40px;
+        .title{
+          font-size: 50px;
+          color: #707070;
+          font-weight: bold;
+        }
+        .subtitle{
+          font-size: 30px;
+          color: $primary;
+        }
+      }
+    }
+  }
+}
+.call-to-action{
+  background-color: $primary;
+  color: white;
+  font-size: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-weight: 500;
+  input{
+    border-radius: 1.5rem;
+    background: white;
+    border: none;
+    width: 100%;
+    padding: 15px;
+  }
+}
+.important-message-1{
+  margin-top: 150px;
+  margin-bottom: 150px;
+  background: $secondary;
+  position: relative;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  .section-overlay-top{
+    position: absolute;
+    top: 100%;
+    left: 0;right: 0;
+  }
+  .section-overlay-bottom{
+    position: absolute;
+    bottom: 100%;
+    left: 0;right: 0;
+  }
+  .title{
+    font-size: 45px;
+    letter-spacing: -1px;
+    color: #707070;
+  }
+  p{
+    font-size: 26px;
+    color: #707070;
+  }
+  .btn{
+    background: white;
+    padding: 0.75em 3em;
+    font-size: 20px;
+    border-radius: 1.5em;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.16);
+  }
+    #img-1 { 
+      float: left;
+      width: 500px;
+      height: 500px;
+      border-radius: 100%;
+      overflow: hidden;
+    }
+}
+.important-message-2{
+  margin-top: 150px;
+  margin-bottom: 150px;
+  .title{
+    font-size: 45px;
+    letter-spacing: -1px;
+    color: #707070;
+  }
+  p{
+    font-size: 30px;
+    color: #707070;
+  }
+  .btn{
+    background: white;
+    border-radius: 1.5em;
+    padding: 0.75em 3em;
+    font-family: 20px;
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.16);
+  }
+    #img-2 { 
+      float: left;
+      margin-left: 25px;
+      margin-top: 20px;
+      width: 500px;
+      height: 500px;
+      border-radius: 100%;
+      overflow: hidden;
+    }
+}
+#footer{
+  background-color: $primary;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  color: white;
+  font-size: 20px;
+  position: relative;
+  .section-overlay-bottom{
+    position: absolute;
+    bottom: 100%;
+    left: 0;right: 0;
+    margin-bottom: -2px;
+  }
+  i{
+    font-size: 48px;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+  }
+  a{
+    color: white;
+    &:hover{
+      color: white;
+    }
+  }
+  .copyright{
+    font-size: 12px;
+    margin-top: 30px;
+  }
+}
